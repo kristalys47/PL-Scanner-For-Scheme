@@ -1,0 +1,279 @@
+Left Parenthesis: (
+Identifier: define
+Identifier: mul
+Left Parenthesis: (
+Identifier: lambda
+Left Parenthesis: (
+Identifier: x
+Identifier: y
+Right Parenthesis: )
+Left Parenthesis: (
+Identifier: define
+Identifier: mat-sca-mul
+Left Parenthesis: (
+Identifier: lambda
+Left Parenthesis: (
+Identifier: m
+Identifier: x
+Right Parenthesis: )
+Left Parenthesis: (
+Identifier: let*
+Left Parenthesis: (
+Left Parenthesis: (
+Identifier: nr
+Left Parenthesis: (
+Identifier: matrix-rows
+Identifier: m
+Right Parenthesis: )
+Right Parenthesis: )
+Left Parenthesis: (
+Identifier: nc
+Left Parenthesis: (
+Identifier: matrix-columns
+Identifier: m
+Right Parenthesis: )
+Right Parenthesis: )
+Left Parenthesis: (
+Identifier: r
+Left Parenthesis: (
+Identifier: make-matrix
+Identifier: nr
+Identifier: nc
+Right Parenthesis: )
+Right Parenthesis: )
+Right Parenthesis: )
+Left Parenthesis: (
+Identifier: do
+Left Parenthesis: (
+Left Parenthesis: (
+Identifier: i
+Number: 0
+Left Parenthesis: (
+Identifier: +
+Identifier: i
+Number: 1
+Right Parenthesis: )
+Right Parenthesis: )
+Right Parenthesis: )
+Left Parenthesis: (
+Left Parenthesis: (
+Identifier: =
+Identifier: i
+Identifier: nr
+Right Parenthesis: )
+Identifier: r
+Right Parenthesis: )
+Left Parenthesis: (
+Identifier: do
+Left Parenthesis: (
+Left Parenthesis: (
+Identifier: j
+Number: 0
+Left Parenthesis: (
+Identifier: +
+Identifier: j
+Number: 1
+Right Parenthesis: )
+Right Parenthesis: )
+Right Parenthesis: )
+Left Parenthesis: (
+Left Parenthesis: (
+Identifier: =
+Identifier: j
+Identifier: nc
+Right Parenthesis: )
+Right Parenthesis: )
+Left Parenthesis: (
+Identifier: matrix-set!
+Identifier: r
+Identifier: i
+Identifier: j
+Left Parenthesis: (
+Identifier: *
+Identifier: x
+Left Parenthesis: (
+Identifier: matrix-ref
+Identifier: m
+Identifier: i
+Identifier: j
+Right Parenthesis: )
+Right Parenthesis: )
+Right Parenthesis: )
+Right Parenthesis: )
+Right Parenthesis: )
+Right Parenthesis: )
+Right Parenthesis: )
+Right Parenthesis: )
+Left Parenthesis: (
+Identifier: define
+Identifier: mat-mat-mul
+Left Parenthesis: (
+Identifier: lambda
+Left Parenthesis: (
+Identifier: m1
+Identifier: m2
+Right Parenthesis: )
+Left Parenthesis: (
+Identifier: let*
+Left Parenthesis: (
+Left Parenthesis: (
+Identifier: nr1
+Left Parenthesis: (
+Identifier: matrix-rows
+Identifier: m1
+Right Parenthesis: )
+Right Parenthesis: )
+Left Parenthesis: (
+Identifier: nr2
+Left Parenthesis: (
+Identifier: matrix-rows
+Identifier: m2
+Right Parenthesis: )
+Right Parenthesis: )
+Left Parenthesis: (
+Identifier: nc2
+Left Parenthesis: (
+Identifier: matrix-columns
+Identifier: m2
+Right Parenthesis: )
+Right Parenthesis: )
+Left Parenthesis: (
+Identifier: r
+Left Parenthesis: (
+Identifier: make-matrix
+Identifier: nr1
+Identifier: nc2
+Right Parenthesis: )
+Right Parenthesis: )
+Right Parenthesis: )
+Left Parenthesis: (
+Identifier: if
+Left Parenthesis: (
+Identifier: not
+Left Parenthesis: (
+Identifier: =
+Left Parenthesis: (
+Identifier: matrix-columns
+Identifier: m1
+Right Parenthesis: )
+Identifier: nr2
+Right Parenthesis: )
+Right Parenthesis: )
+Left Parenthesis: (
+Identifier: match-error
+Identifier: m1
+Identifier: m2
+Right Parenthesis: )
+Right Parenthesis: )
+Left Parenthesis: (
+Identifier: do
+Left Parenthesis: (
+Left Parenthesis: (
+Identifier: i
+Number: 0
+Left Parenthesis: (
+Identifier: +
+Identifier: i
+Number: 1
+Right Parenthesis: )
+Right Parenthesis: )
+Right Parenthesis: )
+Left Parenthesis: (
+Left Parenthesis: (
+Identifier: =
+Identifier: i
+Identifier: nr1
+Right Parenthesis: )
+Identifier: r
+Right Parenthesis: )
+Left Parenthesis: (
+Identifier: do
+Left Parenthesis: (
+Left Parenthesis: (
+Identifier: j
+Number: 0
+Left Parenthesis: (
+Identifier: +
+Identifier: j
+Number: 1
+Right Parenthesis: )
+Right Parenthesis: )
+Right Parenthesis: )
+Left Parenthesis: (
+Left Parenthesis: (
+Identifier: =
+Identifier: j
+Identifier: nc2
+Right Parenthesis: )
+Right Parenthesis: )
+Left Parenthesis: (
+Identifier: do
+Left Parenthesis: (
+Left Parenthesis: (
+Identifier: k
+Number: 0
+Left Parenthesis: (
+Identifier: +
+Identifier: k
+Number: 1
+Right Parenthesis: )
+Right Parenthesis: )
+Left Parenthesis: (
+Identifier: a
+Number: 0
+Left Parenthesis: (
+Identifier: +
+Identifier: a
+Left Parenthesis: (
+Identifier: *
+Left Parenthesis: (
+Identifier: matrix-ref
+Identifier: m1
+Identifier: i
+Identifier: k
+Right Parenthesis: )
+Left Parenthesis: (
+Identifier: matrix-ref
+Identifier: m2
+Identifier: k
+Identifier: j
+Right Parenthesis: )
+Right Parenthesis: )
+Right Parenthesis: )
+Right Parenthesis: )
+Right Parenthesis: )
+Left Parenthesis: (
+Left Parenthesis: (
+Identifier: =
+Identifier: k
+Identifier: nr2
+Right Parenthesis: )
+Left Parenthesis: (
+Identifier: matrix-set!
+Identifier: r
+Identifier: i
+Identifier: j
+Identifier: a
+Right Parenthesis: )
+Right Parenthesis: )
+Right Parenthesis: )
+Right Parenthesis: )
+Right Parenthesis: )
+Right Parenthesis: )
+Right Parenthesis: )
+Right Parenthesis: )
+Dot: .
+Open Vector: #(
+Character: #\h
+Number: 10#
+Identifier: x
+Number: -4
+Number: 8#
+Identifier: b
+Number: 45.537687
+Number: -5.648465
+Number: #o6342
+Number: 34e4
+Number: 4
+Identifier: i+5
+Number: 3+4i
